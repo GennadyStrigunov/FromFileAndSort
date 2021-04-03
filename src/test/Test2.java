@@ -33,7 +33,7 @@ public class Test2 {
             System.out.println(res.get(i));
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Test2 test = new Test2();
         try {
             test.method();

@@ -38,7 +38,7 @@ public class Test3 {
         String[] o = Files.lines(Paths.get("files/test2.txt"), Charset.forName("Cp1251")).toArray(String[]::new);
         List<Usr> list = new ArrayList<Usr>();
         for (int i=0; i<o.length; i=i+5) {
-            Usr usr = new Usr(o[i], o[i+1], o[i+2], Integer.parseInt(o[i+3]), o[i+4]);
+            Usr usr = new Usr(o[i], o[i+1], o[i+2], o[i+3].isEmpty() ? 0 : Integer.parseInt(o[i+3]), o[i+4]);
             list.add(usr);
         }
         Collections.sort(list);
